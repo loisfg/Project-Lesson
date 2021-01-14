@@ -11,47 +11,59 @@
 </head>
 
 <body>
-    <header class="header-music">
-        <img class="logo-header" src="/imagens/logo.png" alt="">
-        
-        <nav class="nav-music">
+    <div class="opacity-background">
+        <header class="header-music">
+            <img class="logo-header" src="/imagens/logo.png" alt="">
+            <nav class="nav-music">
 
-        </nav>
-    </header>
-    <main class="main-container">
-        <section class="section-content">
-            <main class="content-left">
-                <section class="lista-de-musicas">
-                    <label class="nome" for="lista-music">Selecione a música:</label>
-                    <input list="musics" name="music" id="lista-music">
-                    
-                    <datalist id="musics">
-                        <option value="What a shame - Leyla Blue">
-                        <option value="Without me - helsey">
-                        <option value="Phone - Mnek">
-                        <option value="High hopes - Panic at the disco">
-                        <option value="Congratulations - Post Malone">
-                        <option value="Here - Alessia Cara">
-                        <option value="Sit still - Daya">
-                        <option value="You got it - Vedo">
-                        <option value="Devil eyes - Hippie Sabotage">
-                        <option value="More than that - Lauren Jauregui">
-                        <option value="Heather - Conan gray">
-                        <option value="Thinking of you - Katty perry">
-                        <option value="Bazzi - Alone">
-                        <option value="Play with fire - San Tinnesz">
-                    </datalist>
-                </section>
-            </main>
+            </nav>
+        </header>
+        <main class="main-container">
+            <section class="section-content">
+                <main class="content-left">
+                    <section class="lista-de-musicas" id="list-one" style="display:none;">
+                        <label class="nome" for="lista-music">Selecione a música:</label>
+                        <input list="musics" name="music" id="lista-music">
 
-            <figure class="content-right">
-                <img class="bear-dancing" src="/imagens/dancing.gif" alt="">
-            </figure>
-        </section>
-    </main>
-    <footer class="footer-thanks">
-        Created by Luis Fernando Rocha ©
-    </footer>
+                        <datalist id="musics">
+                            <option value="What a shame - Leyla Blue">
+                            <option value="Without me - Helsey">
+                            <option value="Phone - Mnek">
+                            <option value="High hopes - Panic at the disco">
+                            <option value="Congratulations - Post Malone">
+                            <option value="Here - Alessia Cara">
+                            <option value="Sit still - Daya">
+                            <option value="You got it - Vedo">
+                            <option value="Devil eyes - Hippie Sabotage">
+                            <option value="More than that - Lauren Jauregui">
+                            <option value="Heather - Conan Gray">
+                            <option value="Thinking of you - Katty perry">
+                            <option value="Bazzi - Alone">
+                            <option value="Play with fire - San Tinnesz">
+                        </datalist>
+                        <button class="btn-listen">OK</button>
+                    </section>
+
+                    <section class="lista-de-musicas" id="music-playing">
+
+                        <audio id="audios"         
+                        src="musicas/Leyla-Blue-What-a-Shame.mp3" preload="auto">
+                        </audio>
+                        <button onclick="tocar()" class="btn-listen">Play</button>
+                    </section>
+                </main>
+
+                <figure class="content-right">
+                    <img class="bear-dancing" src="/imagens/dancing.gif" alt="">
+                </figure>
+            </section>
+        </main>
+
+        <footer class="footer-thanks">
+            Created by Luis Fernando Rocha ©
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
 </body>
-
 </html>
