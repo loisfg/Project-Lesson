@@ -21,7 +21,7 @@
         <main class="main-container">
             <section class="section-content">
                 <main class="content-left">
-                    <section class="lista-de-musicas" id="list-one" style="display:none;">
+                    <section class="lista-de-musicas" id="list-one" >
                         <label class="nome" for="lista-music">Selecione a música:</label>
                         <input list="musics" name="music" id="lista-music">
 
@@ -44,12 +44,18 @@
                         <button class="btn-listen">OK</button>
                     </section>
 
-                    <section class="lista-de-musicas" id="music-playing">
+                    <section class="lista-de-musicas2" id="music-playing" style="display:none;">
 
-                        <audio id="audios"         
-                        src="musicas/Leyla-Blue-What-a-Shame.mp3" preload="auto">
+                        <audio id="audios" src="/musicas/Leyla-Blue-What-a-Shame.mp3" preload="metadata" controls>
                         </audio>
-                        <button onclick="tocar()" class="btn-listen">Play</button>
+                        <div>
+                            <button class="btn-audio" id="btn-play" onclick="document.getElementById('audio').play()">Reproduzir o áudio</button>
+                            <button class="btn-audio" id="btn-pause" onclick="document.getElementById('audio').pause()">Pausar o áudio</button>
+                            <button class="btn-audio" id="btn-up-sound" onclick="document.getElementById('audio').volume+=0.1">Aumentar o volume</button>
+                            <button class="btn-audio" id="btn-down-sound" onclick="document.getElementById('audio').volume-=0.1">Diminuir o volume</button>
+                          </div>
+
+                        <!-- <button onclick="tocar()" class="btn-listen">Voltar</button> -->
                     </section>
                 </main>
 

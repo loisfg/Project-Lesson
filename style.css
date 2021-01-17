@@ -6,8 +6,7 @@
 }
 
 body {
-    /* background:url(/imagens/fundo.jpg) center no-repeat; */
-    background-color: pink;
+    background:url(/imagens/fundo.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -75,7 +74,19 @@ main.content-left {
     align-items: center;
 }
 
-.lista-de-musicas #music-playing{
+section.lista-de-musicas2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    height: 30%;
+    font-size: 3.5vh;
+
+    background-color: rgba(0, 0, 0, 0.856);
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
 }
 
 .audios {
@@ -97,6 +108,22 @@ button.btn-listen:hover {
     color:rgba(226, 90, 40, 0.966);
     background-color: white;
 }
+
+button.btn-audio {
+    width: 8vh;
+    height: 4.5vh;
+    margin-left: 2px;
+}
+
+.btn-audio button:nth-child(2n+1) {
+    margin-left: 6px;
+}
+
+button.btn-audio:active {
+    background-color: green;
+}
+
+
 
 label.nome {
     margin-top: -10px;
